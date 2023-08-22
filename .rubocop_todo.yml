@@ -31,7 +31,6 @@ Layout/HashAlignment:
 # This cop supports safe autocorrection (--autocorrect).
 Lint/AmbiguousOperatorPrecedence:
   Exclude:
-    - 'lib/axlsx/workbook/worksheet/sheet_protection.rb'
     - 'lib/axlsx/workbook/worksheet/worksheet.rb'
 
 # This cop supports unsafe autocorrection (--autocorrect-all).
@@ -55,10 +54,6 @@ Lint/BooleanSymbol:
 Lint/DisjunctiveAssignmentInConstructor:
   Exclude:
     - 'lib/axlsx/drawing/num_data_source.rb'
-
-Lint/NonLocalExitFromIterator:
-  Exclude:
-    - 'lib/axlsx/util/validators.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: IgnoreEmptyBlocks, AllowUnusedKeywordArguments.
@@ -103,18 +98,6 @@ Naming/MethodName:
 Naming/MethodParameterName:
   Enabled: false
 
-# Configuration parameters: NamePrefix, ForbiddenPrefixes, AllowedMethods, MethodDefinitionMacros.
-# NamePrefix: is_, has_, have_
-# ForbiddenPrefixes: is_, has_, have_
-# AllowedMethods: is_a?
-# MethodDefinitionMacros: define_method, define_singleton_method
-Naming/PredicateName:
-  Exclude:
-    - 'spec/**/*'
-    - 'lib/axlsx/workbook/worksheet/cell.rb'
-    - 'lib/axlsx/workbook/worksheet/worksheet_comments.rb'
-    - 'lib/axlsx/workbook/worksheet/worksheet_drawing.rb'
-
 # Configuration parameters: EnforcedStyle, AllowedIdentifiers, AllowedPatterns.
 # SupportedStyles: snake_case, camelCase
 Naming/VariableName:
@@ -136,13 +119,6 @@ Naming/VariableNumber:
     - 'test/workbook/worksheet/tc_date_time_converter.rb'
     - 'test/workbook/worksheet/tc_sheet_view.rb'
     - 'test/workbook/worksheet/tc_worksheet.rb'
-
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: separated, grouped
-Style/AccessorGrouping:
-  Exclude:
-    - 'lib/axlsx/workbook/worksheet/worksheet_drawing.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle.
@@ -206,18 +182,6 @@ Style/GuardClause:
 # This cop supports safe autocorrection (--autocorrect).
 Style/IfUnlessModifier:
   Enabled: false
-
-# This cop supports safe autocorrection (--autocorrect).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: line_count_dependent, lambda, literal
-Style/Lambda:
-  Exclude:
-    - 'lib/axlsx/drawing/chart.rb'
-    - 'lib/axlsx/drawing/scaling.rb'
-    - 'lib/axlsx/stylesheet/gradient_fill.rb'
-    - 'lib/axlsx/stylesheet/gradient_stop.rb'
-    - 'lib/axlsx/stylesheet/styles.rb'
-    - 'lib/axlsx/util/validators.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: AllowMethodComparison.
@@ -291,18 +255,6 @@ Style/PercentLiteralDelimiters:
     - 'test/workbook/worksheet/tc_table_style_info.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
-Style/PerlBackrefs:
-  Exclude:
-    - 'test/workbook/worksheet/tc_sheet_protection.rb'
-
-# This cop supports unsafe autocorrection (--autocorrect-all).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: short, verbose
-Style/PreferredHashMethods:
-  Exclude:
-    - 'lib/axlsx.rb'
-
-# This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: same_as_string_literals, single_quotes, double_quotes
 Style/QuotedSymbols:
@@ -314,10 +266,6 @@ Style/RedundantRegexpEscape:
   Exclude:
     - 'lib/axlsx/workbook/worksheet/pivot_table.rb'
     - 'lib/axlsx/workbook/worksheet/table.rb'
-
-# This cop supports safe autocorrection (--autocorrect).
-Style/RedundantSelf:
-  Enabled: false
 
 # This cop supports unsafe autocorrection (--autocorrect-all).
 # Configuration parameters: ConvertCodeThatCanStartToReturnNil, AllowedMethods, MaxChainLength.
@@ -337,11 +285,6 @@ Style/SlicingWithRange:
     - 'lib/axlsx/drawing/line_chart.rb'
     - 'lib/axlsx/workbook/worksheet/pivot_table.rb'
     - 'lib/axlsx/workbook/worksheet/worksheet.rb'
-
-# This cop supports unsafe autocorrection (--autocorrect-all).
-Style/StringChars:
-  Exclude:
-    - 'lib/axlsx/workbook/worksheet/sheet_protection.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 # Configuration parameters: EnforcedStyle, ConsistentQuotesInMultiline.
@@ -370,11 +313,6 @@ Style/TrivialAccessors:
     - 'lib/axlsx/workbook/worksheet/conditional_formatting.rb'
     - 'lib/axlsx/workbook/worksheet/rich_text_run.rb'
     - 'lib/axlsx/workbook/worksheet/worksheet_hyperlink.rb'
-
-# This cop supports safe autocorrection (--autocorrect).
-Style/UnpackFirst:
-  Exclude:
-    - 'lib/axlsx/workbook/worksheet/sheet_protection.rb'
 
 # This cop supports safe autocorrection (--autocorrect).
 Style/WhileUntilModifier:

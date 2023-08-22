@@ -24,14 +24,14 @@ module Axlsx
     # @see color
     def color=(v) DataTypeValidator.validate "GradientStop.color", Color, v; @color = v end
     # @see position
-    def position=(v) DataTypeValidator.validate "GradientStop.position", Float, v, lambda { |arg| arg >= 0 && arg <= 1 }; @position = v end
+    def position=(v) DataTypeValidator.validate "GradientStop.position", Float, v, ->(arg) { arg >= 0 && arg <= 1 }; @position = v end
 
     # Serializes the object
     # @param [String] str
     # @return [String]
     def to_xml_string(str = +'')
       str << '<stop position="' << position.to_s << '">'
-      self.color.to_xml_string(str)
+      color.to_xml_string(str)
       str << '</stop>'
     end
   end

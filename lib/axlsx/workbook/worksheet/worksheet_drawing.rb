@@ -15,8 +15,12 @@ module Axlsx
       @drawing = nil
     end
 
+    # The worksheet that owns the drawing
+    # @return [Worksheet]
     attr_reader :worksheet
 
+    # The drawing object
+    # @return [Drawing]
     attr_reader :drawing
 
     # adds a chart to the drawing object
@@ -38,7 +42,7 @@ module Axlsx
 
     # helper method to tell us if the drawing has something in it or not
     # @return [Boolean]
-    def has_drawing?
+    def has_drawing? # rubocop:disable Naming/PredicateName
       @drawing.is_a? Drawing
     end
 
